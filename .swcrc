@@ -1,5 +1,4 @@
 {
-  "exclude": [".test.ts", ".mock.ts"],
   "jsc": {
     "parser": {
       "syntax": "typescript",
