@@ -11,6 +11,6 @@ module.exports = {
     "!<rootDir>/src/**/*.d.ts",
   ],
   transform: {
-    "^.+\\.(t|j)sx?$": "@swc/jest",
+    "^.+\\.(t|j)sx?$": ["@swc/jest", {}],
   },
 };
