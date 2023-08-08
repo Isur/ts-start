@@ -1,10 +1,9 @@
-import { hello } from "@/hello";
+/* eslint-disable no-console */
+import { Config } from "./config";
+import { configString } from "./configString";
 
 function bootstrap() {
-  const str = hello();
-
-  // eslint-disable-next-line no-console
-  console.log(str);
+  console.log(configString(Config));
 }
 
 bootstrap();
