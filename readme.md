@@ -43,8 +43,12 @@ Docker compose will spin app up, just remember about `.env` file.
 
 # Dependencies
 
-This starter uses `swc`, `chokidar`, `concurrently` and `nodemon` for building and runninng app.
+This starter is using `swc` for compiling app. To run hot reload development there is `nodemon` watching generated `.js` files, `chokidar` used with `swc` to compile, and `concurrently` to run together compiler and app.
 
 For static code checking there is `eslint` with plugins and `prettier`.
 
 Testing is done with `jest`.
+
+Environment config is loaded with `dotenv` and `dotenv-expand`.
+
+For schema validation `zod` is used.
