@@ -1,5 +1,5 @@
-import { EnvConfig } from "@/config";
 import { configString } from "./configString";
+import { EnvConfig } from "@/config";
 
 describe("showConfig", () => {
   it("should return the config", () => {

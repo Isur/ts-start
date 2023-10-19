@@ -20,6 +20,13 @@ module.exports = {
       files: ["*.js"],
       extends: ["plugin:@typescript-eslint/disable-type-checked"],
     },
+    {
+      files: ["*test.ts"],
+      rules: {
+        "@typescript-eslint/require-await": "off",
+        "@typescript-eslint/no-unused-vars": "off",
+      },
+    },
   ],
   rules: {
     "lines-between-class-members": [
@@ -29,35 +36,26 @@ module.exports = {
         exceptAfterSingleLine: true,
       },
     ],
-    "no-multiple-empty-lines": [
-      "warn",
-      {
-        max: 1,
-        maxEOF: 1,
-      },
-    ],
     "no-duplicate-imports": "warn",
     "no-console": "warn",
-    "arrow-spacing": "warn",
-    "block-spacing": "warn",
-    "brace-style": [
+    "import/order": [
       "warn",
-      "1tbs",
       {
-        allowSingleLine: true,
+        groups: [
+          "builtin",
+          "external",
+          "internal",
+          "parent",
+          "sibling",
+          "index",
+        ],
       },
     ],
-    "comma-spacing": "warn",
-    "dot-location": ["warn", "property"],
-    "eol-last": ["warn", "always"],
-    "no-trailing-spaces": "warn",
-    semi: ["warn", "always"],
     "import/newline-after-import": [
       "warn",
       {
         count: 1,
       },
     ],
-    "space-before-blocks": "warn",
   },
 };

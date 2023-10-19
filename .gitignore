@@ -14,3 +14,7 @@ coverage
 
 # logs
 npm-debug.log*
+
+# Editor
+.vscode
+.idea
