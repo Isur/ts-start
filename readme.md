@@ -2,11 +2,11 @@
 
 Typescript starter with:
 
-- swc
 - jest
 - eslint
 - prettier
 - Dockerfile
+- pnpm
 
 # Config
 
@@ -26,7 +26,7 @@ Example config is in `.env-template` file.
 | dev        | Run dev with hot reload             |
 | build      | Build app                           |
 | start      | Run builded app                     |
-| clean      | Remove build                        |
+| cli        | Run builded app - cli               |
 | typecheck  | Check types with tsc                |
 | test       | Run jest tests with coverage report |
 | test:watch | Run jest tests with watch mode      |
@@ -43,7 +43,7 @@ Docker compose will spin app up, just remember about `.env` file.
 
 # Dependencies
 
-This starter is using `swc` for compiling app. To run hot reload development there is `nodemon` watching generated `.js` files, `chokidar` used with `swc` to compile, and `concurrently` to run together compiler and app.
+This starter is using `tsc` and `tsc-alias` for compiling app. To run hot reload development there is `nodemon` watching generated `.js` files, and `concurrently` to run together compiler and app.
 
 For static code checking there is `eslint` with plugins and `prettier`.
 

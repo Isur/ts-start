@@ -1,14 +1,14 @@
 {
-  "include": ["src/**/*", "typed.d.ts"],
+  "include": ["src/**/*"],
   "exclude": [],
   "compilerOptions": {
-    "incremental": true,
+    "incremental": false,
     "target": "es2016",
     "lib": ["ESNext", "dom"],
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
     "module": "CommonJS",
-    "rootDir": "./",
+    "rootDir": "./src",
     "moduleResolution": "node",
     "baseUrl": ".",
     "paths": {
@@ -21,7 +21,7 @@
     "declarationMap": true,
     "outDir": "./dist",
     "removeComments": true,
-    "importHelpers": true,
+    "importHelpers": false,
     "importsNotUsedAsValues": "remove",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
